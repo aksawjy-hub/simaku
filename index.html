@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMAKU - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body onload="renderTable()">
+    <div id="floating-emojis"></div>
+    <div class="container">
+        <div class="card dashboard-card">
+            <div class="header-icon">📊</div>
+            <h1 class="logo">SIMAKU</h1>
+            <p class="user-info">Halo, <span id="username-display">User</span>! (ID: 1)</p>
+            
+            <div class="saldo-box">Saldo: Rp <span id="total-saldo">0</span></div>
+
+            <div class="actions-nav">
+                <a href="tambah.html" class="btn-link">+ Tambah Transaksi</a>
+                <button onclick="logout()" class="btn-logout">Keluar Akun ⬅️</button>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Aksi</th>
+                            <th>Kategori</th>
+                            <th>Tipe</th>
+                            <th>Jumlah</th>
+                            <th>Keterangan</th>
+                            <th>Tanggal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transaction-list">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

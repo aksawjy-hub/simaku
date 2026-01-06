@@ -1,0 +1,73 @@
+:root {
+    --bg-blue: #d1eeff;
+    --main-blue: #2ebef3;
+    --dark-blue: #1a73e8;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0; padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--bg-blue);
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex; justify-content: center; align-items: center; min-height: 100vh;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    width: 90%; max-width: 600px;
+    text-align: center; z-index: 10;
+}
+
+.dashboard-card { max-width: 1000px; }
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    color: var(--dark-blue);
+    font-size: 2.5rem; margin: 10px 0;
+}
+
+.input-group { text-align: left; margin-bottom: 15px; }
+.input-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+
+input, select {
+    width: 100%; padding: 12px;
+    border: 1px solid #e0e0e0; border-radius: 12px;
+    box-sizing: border-box; font-family: inherit;
+}
+
+.btn-main {
+    background: var(--main-blue); color: white;
+    border: none; padding: 15px 30px;
+    border-radius: 50px; cursor: pointer;
+    font-size: 1rem; font-weight: bold; width: 100%;
+    margin-top: 10px; transition: 0.3s;
+}
+
+.btn-main:hover { transform: scale(1.02); background: #25a8d9; }
+
+/* Emoji Bergerak */
+.floating {
+    position: fixed; font-size: 2rem;
+    pointer-events: none; z-index: 1;
+    animation: floatAnim 8s linear infinite;
+}
+
+@keyframes floatAnim {
+    0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+/* Tabel */
+.table-container { margin-top: 25px; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #f9fdff; }
+th { background: #b8e7ff; padding: 15px; }
+td { padding: 12px; border-bottom: 1px solid #eee; }
